@@ -25,14 +25,14 @@ import { schema } from '../schemas/validationScheme';
 import { useRegistrarStore } from '../stores/registrarStores';
 import { ref } from 'vue';
 
-//const registrarStore = useRegistrarStore();
+const registrarStore = useRegistrarStore();
 
 const nombre = ref('');
 const email = ref('');
 
 const onSubmit = ()=>{
     
-    useRegistrarStore().guardarRegistro(nombre.value, email.value);
+    registrarStore.guardarRegistro(nombre.value, email.value);
     console.log("Se ha envido correctaente el formulario");
     //alert("Se ha envido correctaente el formulario");
 }

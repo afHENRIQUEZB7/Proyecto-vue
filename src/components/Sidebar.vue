@@ -19,7 +19,7 @@ const registrarStore = useRegistrarStore();
 const nombre = ref(registrarStore.nombre.value);
 const email = ref(registrarStore.email.value);
 
-watch(()=> registrarStore.nombre, (newValue)=> {
+watch(() => registrarStore.nombre, (newValue)=> {
     nombre.value = newValue;
 });
 

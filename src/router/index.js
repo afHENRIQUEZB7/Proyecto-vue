@@ -1,3 +1,6 @@
+import Contador from '@/modules/contador/components/Contador.vue'
+import ListaDeTareas from '@/modules/listaDeTareas/components/ListaDeTareas.vue'
+import RegistrarView from '@/modules/registro/views/RegistrarView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -11,17 +14,17 @@ const router = createRouter({
     {
       path: '/contador',
       name: 'contador',
-      component: () => import('../modules/contador/components/Contador.vue')
+      component: Contador
     },
     {
       path: '/lista-de-tareas',
       name: 'lista-de-tareas',
-      component: () => import('../modules/listaDeTareas/components/ListaDeTareas.vue')
+      component: ListaDeTareas
     },
     {
       path: '/registrar',
       name: 'registrar',
-      component: () => import('../modules/registro/views/RegistrarView.vue')
+      component: RegistrarView
     }  
   ]
 })
